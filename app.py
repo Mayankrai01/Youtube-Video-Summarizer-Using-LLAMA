@@ -9,7 +9,7 @@ load_dotenv()
 llm = ChatGroq(
     model="llama-3.1-70b-versatile",
     temperature=0,
-    groq_api_key=os.getenv("groq_api_key")
+    groq_api_key=st.secrets["groq_api_key"]
 )
 
 prompt="""You are an Youtube video summarizer. Take the transcript, 
